@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)file:///C:/Users/User/Desktop/lab-3-2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ex-3-2</title>
+    
+    <style>
+        div {
+            text-align: center;
+        }
+
+        img.pokemon {
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="display-1"><img class="pokemon" src="./21011_files/pikachu.png"><img class="pokemon" src="./21011_files/pikachu.png"><img class="pokemon" src="./21011_files/pikachu.png"><img class="pokemon" src="./21011_files/pikachu.png"></div>
+    <hr>
+    <div id="display-2"><img class="pokemon" src="./21011_files/pikachu.png"><img class="pokemon" src="./21011_files/pikachu.png"><img class="pokemon" src="./21011_files/pikachu.png"><img class="pokemon" src="./21011_files/pikachu.png"><br><img class="pokemon" src="./21011_files/bulbasaur.png"><img class="pokemon" src="./21011_files/bulbasaur.png"><img class="pokemon" src="./21011_files/bulbasaur.png"><img class="pokemon" src="./21011_files/bulbasaur.png"><br><img class="pokemon" src="./21011_files/charmander.png"><img class="pokemon" src="./21011_files/charmander.png"><img class="pokemon" src="./21011_files/charmander.png"><img class="pokemon" src="./21011_files/charmander.png"><br><img class="pokemon" src="./21011_files/squirtle.png"><img class="pokemon" src="./21011_files/squirtle.png"><img class="pokemon" src="./21011_files/squirtle.png"><img class="pokemon" src="./21011_files/squirtle.png"></div>
+    <hr>
+    <div id="display-3"><img class="pokemon" src="./21011_files/bulbasaur.png"><img class="pokemon" src="./21011_files/pikachu.png"><img class="pokemon" src="./21011_files/squirtle.png"><img class="pokemon" src="./21011_files/pikachu.png"><br><img class="pokemon" src="./21011_files/bulbasaur.png"><img class="pokemon" src="./21011_files/pikachu.png"><img class="pokemon" src="./21011_files/bulbasaur.png"><img class="pokemon" src="./21011_files/squirtle.png"><br><img class="pokemon" src="./21011_files/pikachu.png"><img class="pokemon" src="./21011_files/pikachu.png"><img class="pokemon" src="./21011_files/bulbasaur.png"><img class="pokemon" src="./21011_files/pikachu.png"><br><img class="pokemon" src="./21011_files/charmander.png"><img class="pokemon" src="./21011_files/bulbasaur.png"><img class="pokemon" src="./21011_files/squirtle.png"><img class="pokemon" src="./21011_files/squirtle.png"><br></div>
+    <hr>
+    
+    
+    
+
+    <script>
+        let pokemon1 = "pikachu.png";
+        let pokemon2 = "bulbasaur.png";
+        let pokemon3 = "charmander.png";
+        let pokemon4 = "squirtle.png";
+
+        let  fragment1 = "";
+        for (i=0;i<4;i++)
+        {
+            fragment1 = fragment1 + "<img class='pokemon' src ='" + pokemon1 + "' />";
+        }
+        let  fragment2 = "";
+        for (i=0;i<4;i++)
+        {
+            fragment2 = fragment2 + "<img class='pokemon' src ='" + pokemon1 + "' />";
+        }
+        fragment2 = fragment2 + "<br>"
+        for (i=0;i<4;i++)
+        {
+            fragment2 = fragment2 + "<img class='pokemon' src ='" + pokemon2 + "' />";
+        }
+        fragment2 = fragment2 + "<br>"
+        for (i=0;i<4;i++)
+        {
+            fragment2 = fragment2 + "<img class='pokemon' src ='" + pokemon3 + "' />";
+        }
+        fragment2 = fragment2 + "<br>"
+        for (i=0;i<4;i++)
+        {
+            fragment2 = fragment2 + "<img class='pokemon' src ='" + pokemon4 + "' />";
+        }
+
+
+        let  fragment3 = "";
+for(i=0;i<4;i++)     
+{
+        for (j=0;j<4;j++)
+        {
+            r = Math.floor(Math.random() * 4) +1;
+            if(r==1)
+            {
+                fragment3 = fragment3 + "<img class='pokemon' src ='" + pokemon1 + "' />";
+            }
+            else if(r==2)
+            {
+                fragment3 = fragment3 + "<img class='pokemon' src ='" + pokemon2 + "' />";
+            }
+            else if(r==3)
+            {
+                fragment3 = fragment3 + "<img class='pokemon' src ='" + pokemon3 + "' />";
+            }
+            else 
+            {
+                fragment3 = fragment3 + "<img class='pokemon' src ='" + pokemon4 + "' />";
+            }
+        }   
+           
+            fragment3 = fragment3 + "<br>"
+       
+        
+            
+        
+        
+}      
+        console.log(fragment1);
+        document.getElementById("display-1").innerHTML = fragment1;
+        console.log(fragment2);
+        document.getElementById("display-2").innerHTML = fragment2;
+        console.log(fragment3);
+        document.getElementById("display-3").innerHTML = fragment3;
+    </script>
+
+
+</body></html>
